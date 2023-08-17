@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>us tel validator</title>
+    <link rel="stylesheet" href="./output.css">
+</head>
+<body>
+<body class="p-[30px] items-center justify-center flex pt-10  lg:bg-teal-200">
+    <main class="w-[50%] bg-amber-500 p-[10px] py-5 rounded-3xl grid grid-cols-1 lg:grid-cols-2 md:grid-cols-1 row-[200px] h-max m-[20px]">
+       
+        <h1 class=" flex flex-col text-white h-[170px] text-3xl font-bold pt-9 pl-4">Phone Number<span> Validator</span></h1>
+        <div class="bg-white h-[170px] rounded-xl py-5 px-5">
+            <div class=" flex flex-col font-mono pb-3 ">
+            <label for="Phone" class="font-thin text-[18px]">Phone</label>
+            <input type="number" name="phone" id="phone" placeholder="enter your phone number" class="border-2 border-yellow-400 ">
+        </div>
+
+        <!-- <div class=" flex flex-col font-mono">
+            <label for="text" class="font-thin text-xs">Country</label>
+
+            <select type="text" name="country" id="text" class="border-2 border-yellow-400 bg-white"> 
+                <optgroup label="Choose-Country">
+                    <option value="usa">United States</option>
+                    <option value="canada">Canada</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="australia">Australia</option>
+                    <option value="france">France</option>
+                  </optgroup>
+            </select>
+        </div> -->
+      
+        <!-- <div class="pt-5 pl-5"> <button class="bg-white text-yellow-500 font-sans border-2 border-yellow-500 rounded-3xl py-[3px] px-[8px]">-Reset-</button> -->
+            <h5 class="h-[20px] w-[400px] text-[10px] text-black ">please enter your phone number</h5>
+             <button class="bg-yellow-500 text-white font-sans rounded-3xl py-[3px] px-[8px]">Check</button>
+        </div><br>
+    </main>
+</body>
+<script>
+    const btn = document.querySelector('button')
+    const input = document.querySelector('input')
+    const para = document.querySelector('p')
+    const text = document.querySelector('h5')
+    function tel(){
+        let regex = /^[\d,\s,\+,\-]/
+        if(input.value ==""){
+            text.innerText = "please enter your phone number"
+            }
+            else if (input.value.match(regex)){
+                text.innerText = "congrats! you enter a valid phone number"
+            }
+            else
+            {
+                test.innerText = "opps! your phone number is invalid"
+            }
+        }
+
+    btn.addEventListener('click',tel )
+</script>
+</html>
+</body>
+</html>
